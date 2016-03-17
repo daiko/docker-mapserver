@@ -1,0 +1,2 @@
+# docker-mapserver
+Apache + mapserver
