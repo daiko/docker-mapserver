@@ -2,12 +2,10 @@ FROM daiko/debianfr
 MAINTAINER Florestan Bredow <florestan.bredow@daiko.fr>
 MAINTAINER Amandine Sahl <amandine.sahl@gmail.com>
 
-ENV MAPSERVER_VERSION 7.0.1-2~bpo8+1
-
 RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list \
     && apt-get update && apt-get -y install \
     apache2 \
-    cgi-mapserver=$MAPSERVER_VERSION libapache2-mod-fcgid \
+    cgi-mapserver libapache2-mod-fcgid \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
